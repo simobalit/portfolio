@@ -10,6 +10,8 @@ body{
     color:white;
 }
 
+/* NAVBAR */
+
 nav{
     display:flex;
     justify-content:space-between;
@@ -22,12 +24,6 @@ nav{
     display:flex;
     align-items:center;
     gap:12px;
-}
-
-.logo-img{
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
 }
 
 .logo h1{
@@ -44,7 +40,14 @@ nav{
     text-decoration:none;
     font-size:18px;
     font-weight:bold;
+    transition:0.3s;
 }
+
+.links a:hover{
+    color:#39ff14;
+}
+
+/* HERO */
 
 .hero{
     text-align:center;
@@ -58,18 +61,29 @@ nav{
 
 .hero p{
     color:#999;
-    margin-bottom:30px;
+    margin-bottom:35px;
+    font-size:18px;
 }
 
-button{
+/* CONTACT BUTTON */
+
+.contact-btn{
     background:#39ff14;
     color:black;
-    border:none;
+    text-decoration:none;
     padding:15px 35px;
     border-radius:10px;
     font-weight:bold;
-    cursor:pointer;
+    display:inline-block;
+    transition:0.3s;
 }
+
+.contact-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #39ff14;
+}
+
+/* SLIDER */
 
 .slider{
     display:flex;
@@ -98,27 +112,64 @@ button{
     background:#39ff14;
     border-radius:20px;
 }
+
+/* SOCIALS */
+
 .socials{
+    text-align:center;
+    padding:80px 20px;
+    border-top:1px solid #222;
+    margin-top:50px;
+}
+
+.socials h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.social-icons{
     display:flex;
     justify-content:center;
     gap:25px;
-    padding:40px 20px;
-    border-top:1px solid #222;
-    margin-top:50px;
     flex-wrap:wrap;
 }
 
-.socials a{
-    background:#39ff14;
-    color:black;
+.social-icons a{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    color:white;
     text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-weight:bold;
     transition:0.3s;
 }
 
-.socials a:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px #39ff14;
+.social-icons a:hover{
+    transform:translateY(-10px) scale(1.1);
+    box-shadow:0 0 25px white;
+}
+
+/* COLORS */
+
+.youtube{
+    background:#ff0000;
+}
+
+.facebook{
+    background:#1877f2;
+}
+
+.tiktok{
+    background:#111;
+}
+
+.instagram{
+    background:#e1306c;
+}
+
+.whatsapp{
+    background:#25d366;
 }
