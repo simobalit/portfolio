@@ -26,7 +26,7 @@ nav{
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 80px;
+    padding:22px 70px;
 
     position:sticky;
     top:0;
@@ -42,6 +42,7 @@ nav{
     color:#39ff14;
     font-size:38px;
     font-weight:900;
+    letter-spacing:2px;
 }
 
 .links{
@@ -52,13 +53,31 @@ nav{
 .links a{
     color:white;
     text-decoration:none;
-    font-size:18px;
+    font-size:17px;
     font-weight:bold;
+    transition:0.3s;
+    position:relative;
+}
+
+.links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:#39ff14;
     transition:0.3s;
 }
 
 .links a:hover{
     color:#39ff14;
+}
+
+.links a:hover::after{
+    width:100%;
 }
 
 /* HERO */
@@ -73,24 +92,27 @@ nav{
 
     text-align:center;
 
-    padding:120px 20px;
+    padding:120px 20px 80px;
 }
 
 .hero h2{
-    font-size:95px;
+    font-size:90px;
     line-height:1.1;
     margin-bottom:25px;
+    max-width:1300px;
 }
 
 .hero h2 span{
     color:#39ff14;
-    text-shadow:0 0 30px #39ff14;
+    text-shadow:0 0 25px #39ff14;
 }
 
 .hero p{
     color:#999;
-    font-size:28px;
+    font-size:24px;
     margin-bottom:45px;
+    max-width:850px;
+    line-height:1.7;
 }
 
 .hero-buttons{
@@ -143,7 +165,7 @@ nav{
 
     gap:30px;
 
-    padding:0 60px 100px;
+    padding:0 60px 120px;
 }
 
 .stat-box{
@@ -173,7 +195,7 @@ nav{
 
 .stat-box p{
     color:#999;
-    font-size:22px;
+    font-size:20px;
 }
 
 /* SERVICES */
@@ -222,13 +244,14 @@ nav{
 }
 
 .service h3{
-    font-size:28px;
+    font-size:26px;
     margin-bottom:15px;
 }
 
 .service p{
     color:#999;
-    font-size:18px;
+    font-size:17px;
+    line-height:1.6;
 }
 
 /* PROJECTS */
@@ -277,7 +300,14 @@ nav{
 
 .project-card img{
     width:100%;
+    height:100%;
     display:block;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
 }
 
 .overlay{
@@ -293,7 +323,7 @@ nav{
 }
 
 .overlay h3{
-    font-size:30px;
+    font-size:28px;
 }
 
 /* WHY ME */
@@ -342,7 +372,7 @@ nav{
 }
 
 .why-box h3{
-    font-size:28px;
+    font-size:25px;
 }
 
 /* WORK */
@@ -355,6 +385,7 @@ nav{
 .work h2{
     font-size:85px;
     margin-bottom:25px;
+    line-height:1.2;
 }
 
 .work h2 span{
@@ -364,13 +395,14 @@ nav{
 
 .work p{
     color:#999;
-    font-size:28px;
+    font-size:26px;
     margin-bottom:45px;
 }
 
 .work-btn{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     gap:15px;
 
     padding:22px 50px;
@@ -381,7 +413,7 @@ nav{
     color:white;
     text-decoration:none;
 
-    font-size:28px;
+    font-size:26px;
     font-weight:bold;
 
     transition:0.3s;
@@ -426,11 +458,13 @@ nav{
 
     gap:25px;
     flex-wrap:wrap;
+
+    margin-bottom:40px;
 }
 
 .social-icons a{
-    width:90px;
-    height:90px;
+    width:85px;
+    height:85px;
 
     border-radius:50%;
 
@@ -441,23 +475,30 @@ nav{
     color:white;
     text-decoration:none;
 
-    font-size:40px;
+    font-size:34px;
 
     transition:0.3s;
 
     position:relative;
+
+    flex-shrink:0;
+}
+
+.social-icons a i{
+    font-size:34px;
+    line-height:1;
 }
 
 .social-icons a:hover{
     transform:translateY(-10px) scale(1.08);
 }
 
-/* TOOLTIP FIX */
+/* TOOLTIP */
 
 .social-icons a span{
     position:absolute;
 
-    top:-60px;
+    top:-55px;
     left:50%;
 
     transform:translateX(-50%) translateY(10px);
@@ -465,7 +506,7 @@ nav{
     background:#111;
     color:white;
 
-    padding:10px 18px;
+    padding:8px 16px;
     border-radius:12px;
 
     font-size:14px;
@@ -504,36 +545,84 @@ nav{
     background:#ff0000;
 }
 
+.youtube:hover{
+    box-shadow:0 0 25px #ff0000;
+}
+
 .facebook{
     background:#1877f2;
+}
+
+.facebook:hover{
+    box-shadow:0 0 25px #1877f2;
 }
 
 .tiktok{
     background:#111;
 }
 
+.tiktok:hover{
+    box-shadow:0 0 25px rgba(255,255,255,0.2);
+}
+
 .instagram{
     background:#e1306c;
+}
+
+.instagram:hover{
+    box-shadow:0 0 25px #e1306c;
 }
 
 .whatsapp{
     background:#25d366;
 }
 
+.whatsapp:hover{
+    box-shadow:0 0 25px #25d366;
+}
+
 .copyright{
-    color:#999;
-    margin-top:40px;
+    color:#888;
+    margin-top:25px;
     font-size:18px;
 }
 
 /* MOBILE */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
+
+    .services-box,
+    .why-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:65px;
+    }
+
+    .work h2{
+        font-size:60px;
+    }
+
+}
+
+@media(max-width:900px){
 
     nav{
         padding:20px;
         flex-direction:column;
         gap:20px;
+    }
+
+    .links{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:120px 20px 80px;
     }
 
     .hero h2{
@@ -552,7 +641,7 @@ nav{
     }
 
     .stats{
-        padding:20px;
+        padding:0 20px 80px;
     }
 
     .services,
@@ -568,17 +657,43 @@ nav{
     .why-me h2,
     .socials h2,
     .work h2{
-        font-size:40px;
+        font-size:38px;
     }
 
+    .project-text,
     .work p{
         font-size:18px;
+    }
+
+    .stat-box h3{
+        font-size:45px;
+    }
+
+    .stat-box p{
+        font-size:18px;
+    }
+
+    .service h3,
+    .why-box h3{
+        font-size:22px;
+    }
+
+    .social-icons{
+        gap:18px;
     }
 
     .social-icons a{
         width:70px;
         height:70px;
-        font-size:30px;
+        font-size:28px;
+    }
+
+    .social-icons a i{
+        font-size:28px;
+    }
+
+    .copyright{
+        font-size:15px;
     }
 
 }
