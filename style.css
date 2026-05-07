@@ -98,13 +98,27 @@ button{
     background:#39ff14;
     border-radius:20px;
 }
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:40px 20px;
+    border-top:1px solid #222;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
 
-.contact-btn{
+.socials a{
     background:#39ff14;
     color:black;
-    padding:15px 35px;
+    text-decoration:none;
+    padding:15px 30px;
     border-radius:10px;
     font-weight:bold;
-    text-decoration:none;
-    display:inline-block;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #39ff14;
 }
