@@ -75,3 +75,31 @@ button{
   background:#39ff14;
   border-radius:20px;
 }
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
