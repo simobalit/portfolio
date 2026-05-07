@@ -24,11 +24,10 @@ nav{
     gap:12px;
 }
 
-.logo img{
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
+.logo-img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
 }
 
 .logo h1{
