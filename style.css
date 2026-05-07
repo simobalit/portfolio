@@ -3,11 +3,18 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial;
+    scroll-behavior:smooth;
 }
 
 body{
     background:#050505;
     color:white;
+
+    background-image:
+    linear-gradient(#111 1px, transparent 1px),
+    linear-gradient(90deg, #111 1px, transparent 1px);
+
+    background-size:40px 40px;
 }
 
 /* NAVBAR */
@@ -18,10 +25,18 @@ nav{
     align-items:center;
     padding:20px 80px;
     border-bottom:1px solid #222;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#050505d8;
+    backdrop-filter:blur(10px);
 }
 
 .logo h1{
     font-size:22px;
+    color:#39ff14;
 }
 
 .links{
@@ -45,18 +60,35 @@ nav{
 
 .hero{
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
+
+    animation:fadeUp 1s ease;
 }
 
 .hero h2{
     font-size:70px;
     margin-bottom:20px;
+    line-height:1.1;
 }
 
 .hero p{
     color:#999;
     margin-bottom:35px;
-    font-size:18px;
+    font-size:20px;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 /* CONTACT BUTTON */
@@ -75,6 +107,89 @@ nav{
 .contact-btn:hover{
     transform:scale(1.08);
     box-shadow:0 0 25px #39ff14;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+    padding:40px 60px;
+}
+
+.stat-box{
+    background:#0c0c0c;
+    border:1px solid #222;
+    border-radius:20px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+    border-color:#39ff14;
+    box-shadow:0 0 25px #39ff1440;
+}
+
+.stat-box h3{
+    color:#39ff14;
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#999;
+    font-size:16px;
+}
+
+/* SERVICES */
+
+.services{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.services h2{
+    font-size:45px;
+    margin-bottom:60px;
+}
+
+.services-box{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.service{
+    background:#0c0c0c;
+    border:1px solid #222;
+    border-radius:20px;
+
+    padding:40px 20px;
+
+    transition:0.3s;
+}
+
+.service:hover{
+    transform:translateY(-10px);
+    border-color:#39ff14;
+    box-shadow:0 0 25px #39ff1440;
+}
+
+.service i{
+    font-size:40px;
+    color:#39ff14;
+    margin-bottom:20px;
+}
+
+.service h3{
+    font-size:20px;
 }
 
 /* PROJECTS */
@@ -96,6 +211,58 @@ nav{
 .projects img:hover{
     transform:scale(1.05);
     box-shadow:0 0 30px #39ff14;
+}
+
+/* WORK */
+
+.work{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.work h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.work h2 span{
+    color:#39ff14;
+}
+
+.work p{
+    color:#999;
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.work-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+
+    background:#111;
+    border:2px solid #39ff14;
+
+    color:white;
+    text-decoration:none;
+
+    padding:18px 40px;
+    border-radius:15px;
+
+    font-size:22px;
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.work-btn i{
+    color:#39ff14;
+    font-size:28px;
+}
+
+.work-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #39ff14;
 }
 
 /* SOCIALS */
@@ -153,8 +320,6 @@ nav{
     color:white;
 }
 
-/* TRIANGLE */
-
 .social-icons a span::after{
     content:"";
     position:absolute;
@@ -167,14 +332,12 @@ nav{
     border:10px solid transparent;
 }
 
-/* SHOW TOOLTIP */
-
 .social-icons a:hover span{
     opacity:1;
     transform:translateY(0);
 }
 
-/* YOUTUBE */
+/* COLORS */
 
 .youtube{
     background:#ff0000;
@@ -192,8 +355,6 @@ nav{
     border-top-color:#ff0000;
 }
 
-/* FACEBOOK */
-
 .facebook{
     background:#1877f2;
 }
@@ -209,8 +370,6 @@ nav{
 .facebook span::after{
     border-top-color:#1877f2;
 }
-
-/* TIKTOK */
 
 .tiktok{
     background:#111;
@@ -228,8 +387,6 @@ nav{
     border-top-color:#111;
 }
 
-/* INSTAGRAM */
-
 .instagram{
     background:#e1306c;
 }
@@ -245,8 +402,6 @@ nav{
 .instagram span::after{
     border-top-color:#e1306c;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
     background:#25d366;
@@ -278,9 +433,22 @@ nav{
         font-size:40px;
     }
 
+    .stats{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .services-box{
+        grid-template-columns:1fr;
+    }
+
     .projects{
         grid-template-columns:1fr;
         padding:20px;
+    }
+
+    .work h2{
+        font-size:40px;
     }
 
     .social-icons a{
