@@ -20,12 +20,6 @@ nav{
     border-bottom:1px solid #222;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
 .logo h1{
     font-size:22px;
 }
@@ -55,7 +49,7 @@ nav{
 }
 
 .hero h2{
-    font-size:60px;
+    font-size:70px;
     margin-bottom:20px;
 }
 
@@ -87,7 +81,7 @@ nav{
 
 .projects{
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:30px;
     padding:60px;
 }
@@ -144,8 +138,6 @@ nav{
 .social-icons a span{
     position:absolute;
     top:-55px;
-    background:white;
-    color:black;
     padding:8px 14px;
     border-radius:10px;
     font-size:14px;
@@ -154,6 +146,7 @@ nav{
     transform:translateY(10px);
     transition:0.3s;
     pointer-events:none;
+    color:white;
 }
 
 .social-icons a span::after{
@@ -163,7 +156,6 @@ nav{
     transform:translateX(-50%);
     bottom:-8px;
     border:8px solid transparent;
-    border-top-color:white;
 }
 
 .social-icons a:hover span{
@@ -171,26 +163,66 @@ nav{
     transform:translateY(0);
 }
 
-/* ICON COLORS */
+/* COLORS */
 
 .youtube{
     background:#ff0000;
+}
+
+.youtube span{
+    background:#ff0000;
+}
+
+.youtube span::after{
+    border-top-color:#ff0000;
 }
 
 .facebook{
     background:#1877f2;
 }
 
+.facebook span{
+    background:#1877f2;
+}
+
+.facebook span::after{
+    border-top-color:#1877f2;
+}
+
 .tiktok{
     background:#111;
+}
+
+.tiktok span{
+    background:#111;
+}
+
+.tiktok span::after{
+    border-top-color:#111;
 }
 
 .instagram{
     background:#e1306c;
 }
 
+.instagram span{
+    background:#e1306c;
+}
+
+.instagram span::after{
+    border-top-color:#e1306c;
+}
+
 .whatsapp{
     background:#25d366;
+}
+
+.whatsapp span{
+    background:#25d366;
+}
+
+.whatsapp span::after{
+    border-top-color:#25d366;
 }
 
 /* MOBILE */
