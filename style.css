@@ -37,6 +37,7 @@ nav{
 .logo h1{
     font-size:22px;
     color:#39ff14;
+    letter-spacing:2px;
 }
 
 .links{
@@ -50,31 +51,52 @@ nav{
     font-size:18px;
     font-weight:bold;
     transition:0.3s;
+    position:relative;
+}
+
+.links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:#39ff14;
+    transition:0.3s;
 }
 
 .links a:hover{
     color:#39ff14;
 }
 
+.links a:hover::after{
+    width:100%;
+}
+
 /* HERO */
 
 .hero{
     text-align:center;
-    padding:120px 20px;
-
+    padding:140px 20px;
     animation:fadeUp 1s ease;
 }
 
 .hero h2{
-    font-size:70px;
+    font-size:85px;
     margin-bottom:20px;
     line-height:1.1;
+    text-transform:uppercase;
+}
+
+.hero h2 span{
+    color:#39ff14;
+    text-shadow:0 0 25px #39ff14;
 }
 
 .hero p{
     color:#999;
-    margin-bottom:35px;
-    font-size:20px;
+    margin-bottom:40px;
+    font-size:22px;
 }
 
 @keyframes fadeUp{
@@ -97,11 +119,12 @@ nav{
     background:#39ff14;
     color:black;
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:10px;
+    padding:16px 40px;
+    border-radius:12px;
     font-weight:bold;
     display:inline-block;
     transition:0.3s;
+    font-size:18px;
 }
 
 .contact-btn:hover{
@@ -122,9 +145,9 @@ nav{
 .stat-box{
     background:#0c0c0c;
     border:1px solid #222;
-    border-radius:20px;
+    border-radius:25px;
 
-    padding:40px 20px;
+    padding:50px 20px;
 
     text-align:center;
 
@@ -139,13 +162,13 @@ nav{
 
 .stat-box h3{
     color:#39ff14;
-    font-size:45px;
+    font-size:55px;
     margin-bottom:10px;
 }
 
 .stat-box p{
     color:#999;
-    font-size:16px;
+    font-size:17px;
 }
 
 /* SERVICES */
@@ -156,7 +179,7 @@ nav{
 }
 
 .services h2{
-    font-size:45px;
+    font-size:55px;
     margin-bottom:60px;
 }
 
@@ -171,7 +194,7 @@ nav{
     border:1px solid #222;
     border-radius:20px;
 
-    padding:40px 20px;
+    padding:45px 20px;
 
     transition:0.3s;
 }
@@ -183,13 +206,13 @@ nav{
 }
 
 .service i{
-    font-size:40px;
+    font-size:42px;
     color:#39ff14;
     margin-bottom:20px;
 }
 
 .service h3{
-    font-size:20px;
+    font-size:22px;
 }
 
 /* PROJECTS */
@@ -197,41 +220,73 @@ nav{
 .projects{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:30px;
+    gap:35px;
     padding:60px;
 }
 
-.projects img{
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.project-card img{
     width:100%;
-    border-radius:20px;
-    transition:0.4s;
+    display:block;
+    border-radius:25px;
+    transition:0.5s;
     cursor:pointer;
 }
 
-.projects img:hover{
-    transform:scale(1.05);
+.project-card:hover img{
+    transform:scale(1.08);
     box-shadow:0 0 30px #39ff14;
+}
+
+.project-overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(to top,#000000e7,transparent);
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:30px;
+
+    opacity:0;
+    transition:0.4s;
+}
+
+.project-card:hover .project-overlay{
+    opacity:1;
+}
+
+.project-overlay h3{
+    font-size:28px;
+    color:white;
 }
 
 /* WORK */
 
 .work{
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
 }
 
 .work h2{
-    font-size:60px;
+    font-size:70px;
     margin-bottom:20px;
 }
 
 .work h2 span{
     color:#39ff14;
+    text-shadow:0 0 20px #39ff14;
 }
 
 .work p{
     color:#999;
-    font-size:20px;
+    font-size:22px;
     margin-bottom:40px;
 }
 
@@ -246,10 +301,10 @@ nav{
     color:white;
     text-decoration:none;
 
-    padding:18px 40px;
-    border-radius:15px;
+    padding:20px 45px;
+    border-radius:18px;
 
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
 
     transition:0.3s;
@@ -257,7 +312,7 @@ nav{
 
 .work-btn i{
     color:#39ff14;
-    font-size:28px;
+    font-size:30px;
 }
 
 .work-btn:hover{
@@ -269,9 +324,14 @@ nav{
 
 .socials{
     text-align:center;
-    padding:70px 20px;
+    padding:80px 20px;
     border-top:1px solid #222;
     margin-top:40px;
+}
+
+.social-title{
+    font-size:35px;
+    margin-bottom:40px;
 }
 
 .social-icons{
@@ -282,8 +342,8 @@ nav{
 }
 
 .social-icons a{
-    width:80px;
-    height:80px;
+    width:85px;
+    height:85px;
     border-radius:50%;
     display:flex;
     justify-content:center;
@@ -303,7 +363,7 @@ nav{
 
 .social-icons a span{
     position:absolute;
-    top:-60px;
+    top:-65px;
 
     padding:10px 18px;
     border-radius:14px;
@@ -419,6 +479,16 @@ nav{
     border-top-color:#25d366;
 }
 
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #222;
+    color:#666;
+    font-size:15px;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -429,13 +499,25 @@ nav{
         gap:20px;
     }
 
+    .hero{
+        padding:100px 20px;
+    }
+
     .hero h2{
-        font-size:40px;
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:18px;
     }
 
     .stats{
         grid-template-columns:1fr;
         padding:20px;
+    }
+
+    .services{
+        padding:80px 20px;
     }
 
     .services-box{
@@ -448,7 +530,11 @@ nav{
     }
 
     .work h2{
-        font-size:40px;
+        font-size:45px;
+    }
+
+    .work p{
+        font-size:18px;
     }
 
     .social-icons a{
