@@ -79,52 +79,38 @@ nav{
 }
 
 .contact-btn:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
     box-shadow:0 0 25px #39ff14;
 }
 
-/* SLIDER */
+/* PROJECTS */
 
-.slider{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    padding:40px;
-    scroll-behavior:smooth;
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    padding:60px;
 }
 
-.slider img{
-    width:400px;
+.projects img{
+    width:100%;
     border-radius:20px;
-    transition:.3s;
+    transition:0.4s;
+    cursor:pointer;
 }
 
-.slider img:hover{
+.projects img:hover{
     transform:scale(1.05);
     box-shadow:0 0 30px #39ff14;
-}
-
-.slider::-webkit-scrollbar{
-    height:8px;
-}
-
-.slider::-webkit-scrollbar-thumb{
-    background:#39ff14;
-    border-radius:20px;
 }
 
 /* SOCIALS */
 
 .socials{
     text-align:center;
-    padding:80px 20px;
+    padding:70px 20px;
     border-top:1px solid #222;
-    margin-top:50px;
-}
-
-.socials h2{
-    font-size:40px;
-    margin-bottom:40px;
+    margin-top:40px;
 }
 
 .social-icons{
@@ -152,7 +138,7 @@ nav{
     box-shadow:0 0 25px white;
 }
 
-/* COLORS */
+/* ICON COLORS */
 
 .youtube{
     background:#ff0000;
@@ -172,4 +158,31 @@ nav{
 
 .whatsapp{
     background:#25d366;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero h2{
+        font-size:40px;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .social-icons a{
+        width:65px;
+        height:65px;
+        font-size:28px;
+    }
+
 }
